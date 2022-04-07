@@ -10,9 +10,11 @@ console.log(user);
 function App() {
   return (
     <div>
+      <React.StrictMode>
       <NavBar />
-      <Home />
-      <About />
+      <Home name={user.name} city={user.city} color={user.color}/>
+      <About bio={user.bio} github={user.links.github} />
+      </React.StrictMode>
     </div>
   );
 }
